@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Microsoft.Graph.Contact>
+
+
+@{
+    ViewBag.Title = "Contacts";
+}
+
+<h2>Contacts</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Birthday</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DisplayName</td>
+                <td>@item.MobilePhone</td>
+                <td>@item.Birthday</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
